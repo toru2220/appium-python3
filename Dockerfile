@@ -1,5 +1,6 @@
-FROM	alpine:3.11
+FROM	azabost/android-sdk-28
 
-RUN	apk add --update-cache python3 py-pip bash
-RUN	pip install appium-python-client
+RUN	apt-get update && apt-get install -y python3 python3-pip
+
+RUN	pip3 install Appium-Python-Client pytest pytest-xdist
 
